@@ -13,5 +13,8 @@ app.use(store);
 //挂载router
 app.use(router);
 
+//挂载ui框架
+// app.use(naive)
+
 //挂载实例
 app.mount('#app');
