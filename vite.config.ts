@@ -2,6 +2,9 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
 
+//引入mock
+import { viteMockServe } from 'vite-plugin-mock';
+
 //引入自动导入
 import AutoImport from 'unplugin-auto-import/vite';
 
@@ -86,6 +89,11 @@ export default defineConfig({
     }),
     Components({
       resolvers: [NaiveUiResolver()],
+    }),
+    viteMockServe({
+      supportTs: false,
+      logger: false,
+      mockPath: './mock/',
     }),
   ],
   server: {
