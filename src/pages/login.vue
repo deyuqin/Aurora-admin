@@ -1,5 +1,14 @@
 <script lang="ts" setup>
-const add = ref(0);
+import request from '@/utils/axios';
+
+const getToken = async () => {
+  const res = await request({
+    url: '/user/login',
+    method: 'get',
+  });
+  console.log(res);
+};
+getToken();
 </script>
 
 <template>
