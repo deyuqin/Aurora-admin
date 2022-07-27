@@ -10,7 +10,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 
 //自动导入组件
 import Components from 'unplugin-vue-components/vite';
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -88,7 +88,7 @@ export default defineConfig({
       },
     }),
     Components({
-      resolvers: [NaiveUiResolver()],
+      resolvers: [ElementPlusResolver()],
     }),
     viteMockServe({
       supportTs: false,
