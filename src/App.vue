@@ -1,8 +1,22 @@
 <script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import { GlobalStore } from '@/store/modules/global';
+
+const globalStore = GlobalStore();
+
+//TODO i18n 国际化翻译
+
+// 配置element按钮文字中间是否有空格
+const config = reactive({
+  autoInsertSpace: false,
+});
+
+//配置全局组件大小
+const assemblySize = computed((): string => globalStore.assemblySize);
 </script>
 
+<!-- 配置中英文和主题 -->
 <template>
-  <RouterView />
+  <el-config-provider :button="config" :size="assemblySize">
+    <RouterView />
+  </el-config-provider>
 </template>
