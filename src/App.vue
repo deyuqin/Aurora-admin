@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { GlobalStore } from '@/store/modules/global';
-import { en, zhCn } from 'element-plus/es/locale';
+import zhCn from 'element-plus/es/locale/lang/zh-cn';
+import en from 'element-plus/es/locale/lang/en';
 
 const globalStore = GlobalStore();
 
