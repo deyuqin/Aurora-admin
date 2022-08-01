@@ -5,8 +5,6 @@ import en from 'element-plus/es/locale/lang/en';
 
 const globalStore = GlobalStore();
 
-//TODO i18n 国际化翻译
-
 // 配置element按钮文字中间是否有空格
 const config = reactive({
   autoInsertSpace: false,
