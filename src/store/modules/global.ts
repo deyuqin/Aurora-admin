@@ -6,5 +6,6 @@ export const GlobalStore = defineStore({
   state: (): GlobalState => ({
     //global component size
     assemblySize: 'default',
+    language: '',
   }),
 });
