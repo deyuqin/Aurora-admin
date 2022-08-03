@@ -18,6 +18,7 @@ export default defineConfig({
     //设置别名
     alias: {
       '@': path.resolve(__dirname, 'src'),
+      'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
     },
   },
   plugins: [
@@ -43,15 +44,6 @@ export default defineConfig({
             'useMouse', // import { useMouse } from '@vueuse/core',
             // alias
             ['useFetch', 'useMyFetch'], // import { useFetch as useMyFetch } from '@vueuse/core',
-          ],
-          axios: [
-            // default imports
-            ['default', 'axios'], // import { default as axios } from 'axios',
-          ],
-          '[package-name]': [
-            '[import-names]',
-            // alias
-            ['[from]', '[alias]'],
           ],
         },
         'pinia',
@@ -103,12 +95,12 @@ export default defineConfig({
       port: 5173,
     },
     //设置proxy代理
-    // proxy: {
-    //   // '/api': {
-    //   //   target: 'your https address',
-    //   //   changeOrigin: true,
-    //   //   rewrite: (path: string) => path.replace(/^\/api/, ''),
-    //   // },
-    // },
+    proxy: {
+      '/api': {
+        // target: 'your https address',
+        changeOrigin: true,
+        rewrite: (path: string) => path.replace(/^\/api/, ''),
+      },
+    },
   },
 });

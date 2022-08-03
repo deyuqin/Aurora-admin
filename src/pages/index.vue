@@ -1,6 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div>首页</div>
-  <el-button>Default</el-button>
+  <div>{{ $t('header.weakMode') }}</div>
+  <el-button>en</el-button>
+  <el-button>zh</el-button>
 </template>

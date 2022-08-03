@@ -1,20 +1,17 @@
 import { createApp } from 'vue';
 import './style.css';
 import App from './App.vue';
+// 挂载pinia
 import pinia from '@/store';
+//挂载router
 import router from './router';
+// vue i18n
+import i18n from '@/language/index';
 
 // 创建vue实例
 const app = createApp(App);
 
-// 挂载pinia
-app.use(pinia);
-
-//挂载router
-app.use(router);
-
-//挂载ui框架
-// app.use(naive)
+app.use(pinia).use(router).use(i18n);
 
 //挂载实例
 app.mount('#app');
