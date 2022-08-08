@@ -4,7 +4,7 @@ import App from './App.vue';
 // 挂载pinia
 import pinia from '@/store';
 //挂载router
-import router from './router';
+import router from './router/router';
 // vue i18n
 import i18n from '@/language/index';
 
