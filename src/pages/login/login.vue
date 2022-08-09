@@ -1,14 +1,18 @@
-<script lang="ts" setup>
-import { loginApi } from '@/api/module/login';
-
-let obj = {};
-async function _login() {
-  const res = await loginApi();
-}
-_login();
-</script>
-
 <template>
-  <el-button type="primary">Default</el-button>
-  <div>登录</div>
+  <div class="login-body">
+    <div class="login-main">
+      <div class="login-left">
+        <img src="@/assets/images/login.png" alt="login" />
+      </div>
+      <div class="login-form"><LoginForm></LoginForm></div>
+    </div>
+  </div>
 </template>
+
+<style scoped lang="scss">
+@import './index.scss';
+</style>
+
+<script lang="ts" setup>
+import LoginForm from '@/pages/login/components/LoginForm.vue';
+</script>
